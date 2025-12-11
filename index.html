@@ -492,242 +492,203 @@
 
 
 
-      <!--
-        - #PORTFOLIO
-      -->
+<!-- PORTFOLIO (replace existing article .portfolio) -->
+<article class="portfolio" data-page="portfolio">
 
-      <article class="portfolio" data-page="portfolio">
+  <header>
+    <h2 class="h2 article-title">Portfolio</h2>
+  </header>
 
-        <header>
-          <h2 class="h2 article-title">Portfolio</h2>
-        </header>
+  <section class="projects">
 
-        <section class="projects">
+    <!-- filter buttons -->
+    <ul class="filter-list portfolio-filters">
+      <li class="filter-item"><button class="filter-btn active" data-filter-btn data-filter="all">All</button></li>
+      <li class="filter-item"><button class="filter-btn" data-filter-btn data-filter="web-development">Web development</button></li>
+      <li class="filter-item"><button class="filter-btn" data-filter-btn data-filter="applications">Applications</button></li>
+      <li class="filter-item"><button class="filter-btn" data-filter-btn data-filter="automation-scripts">Automation Scripts</button></li>
+    </ul>
 
-          <ul class="filter-list">
+    <!-- responsive select for small screens -->
+    <div class="filter-select-box portfolio-select">
+      <button class="filter-select" data-select>
+        <div class="select-value" data-select-value>Select category</div>
+        <div class="select-icon"><ion-icon name="chevron-down"></ion-icon></div>
+      </button>
 
-            <li class="filter-item">
-              <button class="active" data-filter-btn>All</button>
-            </li>
+      <ul class="select-list" data-select-list>
+        <li class="select-item"><button data-select-item data-value="all">All</button></li>
+        <li class="select-item"><button data-select-item data-value="web-development">Web development</button></li>
+        <li class="select-item"><button data-select-item data-value="applications">Applications</button></li>
+        <li class="select-item"><button data-select-item data-value="automation-scripts">Automation Scripts</button></li>
+      </ul>
+    </div>
 
-            <li class="filter-item">
-              <button data-filter-btn>Web design</button>
-            </li>
+    <!-- projects grid -->
+    <ul class="project-list portfolio-grid">
 
-            <li class="filter-item">
-              <button data-filter-btn>Applications</button>
-            </li>
+      <!-- Student Portal Prototype -->
+      <li class="project-item" data-filter-item data-category="web-development">
+        <a href="#" class="project-card">
+          <figure class="project-img" aria-hidden="true">
+            <!-- inline svg placeholder -->
+            <svg width="140" height="100" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Student Portal">
+              <rect rx="10" ry="10" width="140" height="100" fill="#eef6ff"/>
+              <g transform="translate(12,18)" fill="#2c3e50" opacity="0.9">
+                <rect x="0" y="0" width="74" height="12" rx="3"></rect>
+                <rect x="0" y="18" width="110" height="6" rx="3"></rect>
+                <rect x="0" y="30" width="110" height="6" rx="3"></rect>
+                <circle cx="100" cy="40" r="14"></circle>
+              </g>
+            </svg>
+          </figure>
 
-            <li class="filter-item">
-              <button data-filter-btn>Web development</button>
-            </li>
-
-          </ul>
-
-          <div class="filter-select-box">
-
-            <button class="filter-select" data-select>
-
-              <div class="select-value" data-selecct-value>Select category</div>
-
-              <div class="select-icon">
-                <ion-icon name="chevron-down"></ion-icon>
-              </div>
-
-            </button>
-
-            <ul class="select-list">
-
-              <li class="select-item">
-                <button data-select-item>All</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web design</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Applications</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Web development</button>
-              </li>
-
-            </ul>
-
+          <div class="project-body">
+            <h3 class="project-title">Student Portal Prototype</h3>
+            <p class="project-category">Web development</p>
+            <p class="project-desc">Dashboard-style portal for managing courses, schedules and notifications with a clean, responsive UI prototype.</p>
           </div>
+        </a>
+      </li>
 
-          <ul class="project-list">
+      <!-- Task Automation Scripts -->
+      <li class="project-item" data-filter-item data-category="automation-scripts">
+        <a href="#" class="project-card">
+          <figure class="project-img" aria-hidden="true">
+            <svg width="140" height="100" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Automation Scripts">
+              <rect rx="10" ry="10" width="140" height="100" fill="#f3fff6"/>
+              <path d="M20 30h40v8H20zM20 50h80v8H20zM20 70h60v8H20z" fill="#2b6b40" opacity="0.95"></path>
+            </svg>
+          </figure>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+          <div class="project-body">
+            <h3 class="project-title">Task Automation Scripts</h3>
+            <p class="project-category">Automation Scripts</p>
+            <p class="project-desc">A collection of Python & shell scripts to automate repetitive tasks: file ops, data transforms and lightweight ETL workflows.</p>
+          </div>
+        </a>
+      </li>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+      <!-- Notes Manager -->
+      <li class="project-item" data-filter-item data-category="applications">
+        <a href="#" class="project-card">
+          <figure class="project-img" aria-hidden="true">
+            <svg width="140" height="100" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Notes Manager">
+              <rect rx="10" ry="10" width="140" height="100" fill="#fff7ef"/>
+              <rect x="14" y="14" width="88" height="72" rx="6" fill="#ffdcb2"></rect>
+            </svg>
+          </figure>
 
-                  <img src="./assets/images/project-1.jpg" alt="finance" loading="lazy">
-                </figure>
+          <div class="project-body">
+            <h3 class="project-title">Notes Manager</h3>
+            <p class="project-category">Applications</p>
+            <p class="project-desc">Lightweight note-taking app prototype with tagging, search, and local persistence — focused on productivity and simplicity.</p>
+          </div>
+        </a>
+      </li>
 
-                <h3 class="project-title">Finance</h3>
+      <!-- Daily Tracker -->
+      <li class="project-item" data-filter-item data-category="applications">
+        <a href="#" class="project-card">
+          <figure class="project-img" aria-hidden="true">
+            <svg width="140" height="100" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daily Tracker">
+              <rect rx="10" ry="10" width="140" height="100" fill="#f0f8ff"/>
+              <rect x="12" y="18" width="116" height="12" rx="4" fill="#bcd9ff"></rect>
+              <rect x="12" y="36" width="116" height="10" rx="3" fill="#d9edff"></rect>
+            </svg>
+          </figure>
 
-                <p class="project-category">Web development</p>
+          <div class="project-body">
+            <h3 class="project-title">Daily Tracker</h3>
+            <p class="project-category">Applications</p>
+            <p class="project-desc">A minimal task/time tracker for daily habits and progress — includes CSV export and quick analytics view.</p>
+          </div>
+        </a>
+      </li>
 
-              </a>
-            </li>
+      <!-- Login & OTP Verification Module -->
+      <li class="project-item" data-filter-item data-category="web-development">
+        <a href="#" class="project-card">
+          <figure class="project-img" aria-hidden="true">
+            <svg width="140" height="100" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Login & OTP">
+              <rect rx="10" ry="10" width="140" height="100" fill="#f6f7ff"/>
+              <rect x="20" y="28" width="100" height="12" rx="3" fill="#d0d8ff"></rect>
+              <rect x="36" y="52" width="68" height="10" rx="3" fill="#b8c3ff"></rect>
+            </svg>
+          </figure>
 
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
+          <div class="project-body">
+            <h3 class="project-title">Login & OTP Verification Module</h3>
+            <p class="project-category">Web development</p>
+            <p class="project-desc">Secure authentication module with OTP flow, input validation and basic rate-limiting. Designed for mobile-first flows.</p>
+          </div>
+        </a>
+      </li>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+      <!-- Simple REST APIs -->
+      <li class="project-item" data-filter-item data-category="web-development">
+        <a href="#" class="project-card">
+          <figure class="project-img" aria-hidden="true">
+            <svg width="140" height="100" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="REST APIs">
+              <rect rx="10" ry="10" width="140" height="100" fill="#f7fff7"/>
+              <g fill="#237a3b">
+                <rect x="14" y="18" width="40" height="10" rx="2"></rect>
+                <rect x="14" y="34" width="110" height="8" rx="3"></rect>
+                <rect x="14" y="50" width="110" height="8" rx="3"></rect>
+              </g>
+            </svg>
+          </figure>
 
-                  <img src="./assets/images/project-2.png" alt="orizon" loading="lazy">
-                </figure>
+          <div class="project-body">
+            <h3 class="project-title">Simple REST APIs</h3>
+            <p class="project-category">Web development</p>
+            <p class="project-desc">Collection of small REST endpoints (CRUD) built with Flask/Express — documented and tested locally with Postman.</p>
+          </div>
+        </a>
+      </li>
 
-                <h3 class="project-title">Orizon</h3>
+      <!-- Mini Scheduler Tool -->
+      <li class="project-item" data-filter-item data-category="applications">
+        <a href="#" class="project-card">
+          <figure class="project-img" aria-hidden="true">
+            <svg width="140" height="100" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mini Scheduler">
+              <rect rx="10" ry="10" width="140" height="100" fill="#fff6f8"/>
+              <rect x="18" y="18" width="28" height="24" rx="3" fill="#ffd6e0"></rect>
+              <rect x="48" y="18" width="64" height="24" rx="3" fill="#ffeef6"></rect>
+            </svg>
+          </figure>
 
-                <p class="project-category">Web development</p>
+          <div class="project-body">
+            <h3 class="project-title">Mini Scheduler Tool</h3>
+            <p class="project-category">Applications</p>
+            <p class="project-desc">Small scheduling utility with calendar view and reminder export. Built for quick planning and class schedules.</p>
+          </div>
+        </a>
+      </li>
 
-              </a>
-            </li>
+      <!-- CLI Utilities Pack -->
+      <li class="project-item" data-filter-item data-category="applications">
+        <a href="#" class="project-card">
+          <figure class="project-img" aria-hidden="true">
+            <svg width="140" height="100" viewBox="0 0 140 100" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="CLI Utilities">
+              <rect rx="10" ry="10" width="140" height="100" fill="#f8fbff"/>
+              <text x="20" y="58" font-family="monospace" font-size="32" fill="#1f2937">&gt;_</text>
+            </svg>
+          </figure>
 
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
+          <div class="project-body">
+            <h3 class="project-title">CLI Utilities Pack</h3>
+            <p class="project-category">Applications</p>
+            <p class="project-desc">Handy command-line tools for file ops, quick text transforms and lightweight automation — cross-platform and scriptable.</p>
+          </div>
+        </a>
+      </li>
 
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
+    </ul>
 
-                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
-                </figure>
+  </section>
 
-                <h3 class="project-title">Fundo</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-4.png" alt="brawlhalla" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Brawlhalla</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
-                </figure>
-
-                <h3 class="project-title">DSM.</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web design">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">MetaSpark</h3>
-
-                <p class="project-category">Web design</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Summary</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="applications">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Task Manager</h3>
-
-                <p class="project-category">Applications</p>
-
-              </a>
-            </li>
-
-            <li class="project-item  active" data-filter-item data-category="web development">
-              <a href="#">
-
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-
-                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
-                </figure>
-
-                <h3 class="project-title">Arrival</h3>
-
-                <p class="project-category">Web development</p>
-
-              </a>
-            </li>
-
-          </ul>
-
-        </section>
-
-      </article>
-
+</article>
 
 
 
